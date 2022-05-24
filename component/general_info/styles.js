@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   icon: {
-    left: "980%",
+    left: "900%",
     marginRight: 10,
   },
 });

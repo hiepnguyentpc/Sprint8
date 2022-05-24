@@ -6,6 +6,7 @@ import styles from "./styles";
 import SemesterDropDown from "../../DropDownComponents/SemesterDropDown/SemesterDropDown";
 import PaymentDropDown from "../../DropDownComponents/PaymentDropDown/PaymentDropDown";
 import LocationDropDown from "../../DropDownComponents/LocationDropDown/LocationDropDown";
+import UpdateDropDown from "../../DropDownComponents/UpdateDropDown/UpdateDropDown";
 
 const Main_Section = () => {
     const [semester, setSemester] = useState('');
@@ -97,6 +98,34 @@ const Main_Section = () => {
       </View>
         <LocationDropDown locationToMain={locationToMain}/>
       </View>
+      </View>
+
+
+      <View style = {{marginTop:20, flexDirection:"column"}}>
+      <Text style={styles.line1}>- Đề nghị cập nhật (xoá/ trừ) công nợ*:</Text>
+      <View style = {{marginTop:20}}>
+      <UpdateDropDown/>
+      </View>
+
+        <View style={{marginTop:70, alignItems:"center"}}>
+        <TextInput style={styles.line3}>Thêm đề nghị khác</TextInput>
+        <View style = {{height:1, width:300, backgroundColor:"#8EA4B8", top:44, top:-20, alignSelf:"center"}}></View>
+        </View>
+
+        <View style={{flexDirection:"row"}}>
+            <Text style={styles.line3}>Lý do *:</Text>
+            <TextInput style={styles.line3}>Nhập lý do</TextInput>
+        </View>
+
+
+        <View style={{flexDirection:"row", justifyContent:"center", top:-10}}>
+            <View style={{height: 40, width: 80, borderRadius:10, backgroundColor:"#245D7C", alignItems:"center", justifyContent:"center"}}>
+                <Text style={{fontSize:16, fontWeight:"bold", color:"white", alignSelf:"center"}}>Gửi đơn</Text>
+            </View>
+        </View>
+
+        
+
       </View>
 
 
