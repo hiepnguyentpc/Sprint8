@@ -1,22 +1,17 @@
 import DropDownPicker from "react-native-dropdown-picker";
 import { useState } from "react";
 import styles from "./styles";
-import { createContext } from 'react';
 
-const SemesterDropDown = ({semesterToMain}) => {
+const LocationDropDown = ({locationToMain}) => {
 
-  const data = "This is data from Child Component to the Parent Component."
 
 
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    { label: "Học kì 1", value: "Học kì 1" },
-    { label: "Học kì 2", value: "Học kì 2" },
-    { label: "Học kì 3", value: "Học kì 3" },
-    { label: "Học kì 4", value: "Học kì 4" },
+    { label: "HÀ NỘI", value: "CƠ SỞ HÀ NỘI" },
+    { label: "HCM", value: "CƠ SỞ HCM" },
   ]);
-  const [selectedSemester, setSelectedSemester] = useState();
   
   return (
     <DropDownPicker
@@ -28,10 +23,10 @@ const SemesterDropDown = ({semesterToMain}) => {
       setItems={setItems}
       style={styles.semester_dropdown}
       onSelectItem={(value) => {
-        semesterToMain(value)
+        locationToMain(value)
 }}
     />
   );
 };
-export default SemesterDropDown
+export default LocationDropDown
 

@@ -38,7 +38,15 @@ const styles = StyleSheet.create({
   },
   subView1: {
     flexDirection: "row",
-    marginLeft:-15
+    left:"-8%"
+  },
+  subView2: {
+    flexDirection: "row",
+    left:"-80%"
+  },
+  subView3: {
+    flexDirection: "row",
+    left:"-140%"
   },
   semester_dropdown: {
     width: 200,
